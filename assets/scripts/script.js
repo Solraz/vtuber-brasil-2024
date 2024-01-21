@@ -4,7 +4,7 @@ const load_page = async () => {
 	const origin = window.location.origin;
 	const main = document.querySelector(`main`);
 
-	if (page === "/") {
+	if (page === "/vtuber-brasil-2024/") {
 		url = `https://solraz.github.io/vtuber-brasil-2024/pages/initial`;
 	} else {
 		url = `https://solraz.github.io/vtuber-brasil-2024/pages${page}`;
