@@ -64,7 +64,7 @@ const cookies = async () => {
 	let new_cookie = await fetch(
 		`https://solraz.github.io/vtuber-brasil-2024/api/cookies`,
 		{
-			method: "POST",
+			method: "GET",
 		}
 	);
 	new_cookie = await new_cookie.json();
@@ -87,7 +87,7 @@ const fill_winners = async () => {
 	let winner_url =
 		year !== "" ? `/api/years/${year}.json` : `api/years/2020.json`;
 	let fill_winners = await fetch(winner_url, {
-		method: "POST",
+		method: "GET",
 	});
 	fill_winners = await fill_winners.json();
 
