@@ -54,7 +54,7 @@ if (isset($_POST["voter"]) && $_POST["voter"] !== "") {
         </video-container>
         <item-inner>
           <div>
-            <img src="/assets/img/logo.webp" alt="">
+            <img src="./assets/img/logo.webp" alt="">
             <h4>{$rows[0]['name']}</h4>
           </div>
           <input type="radio" name="winner" value="{$rows[0]['id']}"></input>
@@ -99,7 +99,7 @@ echo <<<EOT
       </video-container>
       <item-inner>
         <div>
-          <img src="/assets/img/logo.webp" alt="">
+          <img src="./assets/img/logo.webp" alt="">
           <h4>{$rows[0]['name']}</h4>
         </div>
         <input type="radio" name="winner" value="{$rows[0]['id']}"></input>
@@ -111,7 +111,7 @@ echo <<<EOT
       </video-container>
       <item-inner>
         <div>
-          <img src="/assets/img/logo.webp" alt="">
+          <img src="./assets/img/logo.webp" alt="">
           <h4>{$rows[1]['name']}</h4>
         </div>
         <input type="radio" name="winner" value="{$rows[0]['id']}"></input>

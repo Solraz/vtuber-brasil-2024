@@ -98,14 +98,14 @@ const fill_winners = async () => {
 			<winner>
 				<div class="category">${key}</div>
 				<div class="public">
-					<img src="/assets/img/logo.webp" alt="">
+					<img src="./assets/img/logo.webp" alt="">
 					<div>
 						<h6>Público</h6>
 						<h4>${value.public}</h4>
 					</div>
 				</div>
 				<div class="jury">
-					<img src="/assets/img/logo.webp" alt="">
+					<img src="./assets/img/logo.webp" alt="">
 					<div>
 						<h6>Jurados</h6>
 						<h4>${value.jury}</h4>
