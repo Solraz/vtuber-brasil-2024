@@ -1,16 +1,16 @@
 <previous-winners hx-on:htmx:load="js:fill_winners(), winner_navigation()">
   <winners-navigation>
     <years>
-      <p data-year="2020" hx-trigger="click throttle:750ms" hx-post="./pages/previous-winners?year=2020"
+      <p data-year="2020" hx-trigger="click throttle:750ms" hx-get="./pages/previous-winners?year=2020"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2020">2020</p>
-      <p hx-trigger="click throttle:750ms" data-year="2021" hx-post="./pages/previous-winners?year=2021"
+      <p hx-trigger="click throttle:750ms" data-year="2021" hx-get="./pages/previous-winners?year=2021"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2021">2021</p>
-      <p hx-trigger="click throttle:750ms" data-year="2022" hx-post="./pages/previous-winners?year=2022"
+      <p hx-trigger="click throttle:750ms" data-year="2022" hx-get="./pages/previous-winners?year=2022"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2022">2022</p>
-      <p hx-trigger="click throttle:750ms" data-year="2023" hx-post="./pages/previous-winners?year=2023"
+      <p hx-trigger="click throttle:750ms" data-year="2023" hx-get="./pages/previous-winners?year=2023"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2023">2023</p>
     </years>
@@ -180,16 +180,16 @@
   </winners>
   <winners-navigation>
     <years>
-      <p class="active" data-year="2020" hx-trigger="click throttle:750ms" hx-post="./pages/previous-winners?year=2020"
+      <p class="active" data-year="2020" hx-trigger="click throttle:750ms" hx-get="./pages/previous-winners?year=2020"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2020">2020</p>
-      <p hx-trigger="click throttle:750ms" data-year="2021" hx-post="./pages/previous-winners?year=2021"
+      <p hx-trigger="click throttle:750ms" data-year="2021" hx-get="./pages/previous-winners?year=2021"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2021">2021</p>
-      <p hx-trigger="click throttle:750ms" data-year="2022" hx-post="./pages/previous-winners?year=2022"
+      <p hx-trigger="click throttle:750ms" data-year="2022" hx-get="./pages/previous-winners?year=2022"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2022">2022</p>
-      <p hx-trigger="click throttle:750ms" data-year="2023" hx-post="./pages/previous-winners?year=2023"
+      <p hx-trigger="click throttle:750ms" data-year="2023" hx-get="./pages/previous-winners?year=2023"
         hx-swap="innerHTML swap:250ms settle:250ms" hx-target="winners" hx-select="winners"
         hx-push-url="previous-winners?year=2023">2023</p>
     </years>

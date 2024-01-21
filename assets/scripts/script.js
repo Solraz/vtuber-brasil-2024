@@ -10,7 +10,7 @@ const load_page = async () => {
 		url = `https://solraz.github.io/vtuber-brasil-2024/pages${page}`;
 	}
 
-	htmx.ajax("POST", url, { target: "main>container", swap: "innerHTML" });
+	htmx.ajax("GET", url, { target: "main>container", swap: "innerHTML" });
 };
 
 const get_cookie = (name) => {
@@ -158,7 +158,7 @@ const fill_category = () => {
 		category.toUpperCase();
 
 	let current_category = document.querySelector(
-		`category[hx-post$="=${category}"]`
+		`category[hx-get$="=${category}"]`
 	);
 	current_category.classList.add(`selected`);
 

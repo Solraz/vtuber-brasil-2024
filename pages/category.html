@@ -3,15 +3,15 @@
     <h2>Mascote</h2>
   </div>
 
-  <contestants hx-trigger="load" hx-post="/api/get_contestants"
+  <contestants hx-trigger="load" hx-get="/api/get_contestants"
     hx-vals="js:{category: fill_category(), voter: get_cookie('voter_id')}" hx-target="contestants" hx-swap="innerHTML">
 
   </contestants>
 
   <voting-buttons>
-    <button class="" hx-post="./pages/initial" hx-trigger="click throttle:750ms"
+    <button class="" hx-get="./pages/initial" hx-trigger="click throttle:750ms"
       hx-swap="innerHTML swap:250ms settle:250ms" hx-target="main>container" hx-push-url="/" class="">Sair</button>
-    <button class="" hx-post="/api/vote" hx-include="[name='winner']"
+    <button class="" hx-get="/api/vote" hx-include="[name='winner']"
       hx-vals="js:{ voter: get_cookies('voter_id') }">Próximo duelo <svg width="20" height="22" viewBox="0 0 20 22"
         fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_60_219)">
@@ -44,41 +44,41 @@
   <categories>
     <h3 class="has-after-before">Categorias</h3>
     <div>
-      <category hx-post="./pages/category?category=mascote" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=mascote" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=mascote">Mascote
       </category>
 
-      <category hx-post="./pages/category?category=videocassetadas" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=videocassetadas" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=videocassetadas">Video Cassetadas</category>
 
-      <category hx-post="./pages/category?category=karaokê" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=karaokê" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=karaokê">Karaokê</category>
 
-      <category hx-post="./pages/category?category=noob" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=noob" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=noob">Noob</category>
 
-      <category hx-post="./pages/category?category=qi negativo" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=qi negativo" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=qi negativo">QI Negativo</category>
 
-      <category hx-post="./pages/category?category=medroso" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=medroso" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=medroso">Medroso</category>
 
-      <category hx-post="./pages/category?category=pior dicção" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=pior dicção" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=mascote">Pior Dicção</category>
 
-      <category hx-post="./pages/category?category=fofo" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=fofo" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=fofo">Fofo</category>
 
-      <category hx-post="./pages/category?category=explosão de raiva" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=explosão de raiva" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=explosão de raiva">Explosão de Raiva</category>
 
-      <category hx-post="./pages/category?category=talento inútil" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=talento inútil" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=talento inútil">Talento Inútil</category>
 
-      <category hx-post="./pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=moderador">Moderador</category>
 
-      <category hx-post="./pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+      <category hx-get="./pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
         hx-target="main>container" hx-push-url="/category?category=moderador">Lorem</category>
     </div>
   </categories>
