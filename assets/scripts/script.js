@@ -62,7 +62,7 @@ const cookies = async () => {
 
 	const origin = window.location.origin;
 	let new_cookie = await fetch(
-		`https://solraz.github.io/vtuber-brasil-2024/api/cookies`,
+		`https://solraz.github.io/vtuber-brasil-2024/api/cookies/`,
 		{
 			method: "GET",
 		}
