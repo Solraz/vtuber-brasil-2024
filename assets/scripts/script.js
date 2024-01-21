@@ -5,9 +5,9 @@ const load_page = async () => {
 	const main = document.querySelector(`main`);
 
 	if (page === "/") {
-		url = `${window.location.href}pages/initial`;
+		url = `https://solraz.github.io/vtuber-brasil-2024/pages/initial`;
 	} else {
-		url = `${origin}/pages${page}`;
+		url = `https://solraz.github.io/vtuber-brasil-2024/pages${page}`;
 	}
 
 	htmx.ajax("POST", url, { target: "main>container", swap: "innerHTML" });
