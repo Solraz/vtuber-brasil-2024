@@ -61,9 +61,12 @@ const cookies = async () => {
 	}
 
 	const origin = window.location.origin;
-	let new_cookie = await fetch(`${origin}/api/cookies`, {
-		method: "POST",
-	});
+	let new_cookie = await fetch(
+		`https://solraz.github.io/vtuber-brasil-2024/api/cookies`,
+		{
+			method: "POST",
+		}
+	);
 	new_cookie = await new_cookie.json();
 
 	let age = new Date();
