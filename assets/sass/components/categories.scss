@@ -1,0 +1,48 @@
+@use "../bootstrap" as b;
+
+categories {
+	@include b.flex;
+	flex-flow: column;
+
+	width: 100%;
+
+	margin-top: b.rem(120);
+	padding: b.rem(16) 0;
+
+	gap: b.rem(48);
+
+	> div {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+		grid-auto-rows: 1fr;
+
+		width: 100%;
+
+		gap: b.rem(16);
+
+		@media (max-width: b.rem(800)) {
+			grid-template-columns: repeat(auto-fit, minmax(b.rem(120), 1fr));
+		}
+	}
+
+	category {
+		@include b.flex;
+
+		padding: b.rem(40) b.rem(24);
+		word-wrap: break-word;
+
+		text-align: center;
+
+		background-color: b.get(b.$colors, secondary);
+		color: b.get(b.$colors, white);
+
+		width: 100%;
+
+		cursor: pointer;
+
+		&.selected {
+			background-color: b.get(b.$colors, black);
+			color: b.get(b.$colors, white);
+		}
+	}
+}

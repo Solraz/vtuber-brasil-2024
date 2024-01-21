@@ -1,0 +1,84 @@
+@use "../bootstrap" as b;
+
+how-subscribe,
+how-vote {
+	@include b.flex;
+	width: 100%;
+
+	.content {
+		@include b.flex;
+		height: 100%;
+
+		padding: b.rem(24) 0 b.rem(48);
+
+		gap: b.rem(48);
+
+		video-container {
+			@include b.flex;
+			justify-content: start;
+
+			width: calc(50% - b.rem(24));
+			height: 100%;
+
+			video,
+			embed {
+				aspect-ratio: 16/9;
+				width: 100%;
+			}
+		}
+
+		.explanation {
+			@include b.flex;
+			flex-flow: column;
+			align-items: start;
+
+			width: calc(50% - b.rem(24));
+
+			ul {
+				@include b.flex;
+				flex-flow: column;
+				gap: b.rem(16);
+
+				list-style-type: numbered;
+			}
+
+			button {
+				margin-top: b.rem(24);
+			}
+		}
+
+		@media (max-width: b.rem(1300)) {
+			flex-flow: column;
+
+			video-container,
+			.explanation {
+				width: 100%;
+			}
+
+			.explanation {
+				padding: 0 b.rem(24);
+			}
+		}
+	}
+
+	&.oob-background {
+		position: relative;
+
+		out-of-bounds-background {
+			position: absolute;
+			top: b.rem(-24);
+
+			left: 50%;
+			transform: translateX(calc(-50% - b.rem(0)));
+
+			width: 98.5vw;
+			height: calc(100% + b.rem(64));
+
+			z-index: -1;
+
+			background-color: black;
+
+			overflow: clip;
+		}
+	}
+}

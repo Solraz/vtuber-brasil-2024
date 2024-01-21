@@ -1,0 +1,12 @@
+@use "../bootstrap" as b;
+
+logo {
+	@include b.flex;
+	flex-flow: column;
+
+	color: b.get(b.$colors, primary);
+
+	> h1:nth-child(1) {
+		font-weight: 800;
+	}
+}

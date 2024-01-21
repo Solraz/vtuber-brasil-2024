@@ -1,0 +1,158 @@
+@use "bootstrap" as b;
+
+@use "components/menu";
+@use "components/logo";
+@use "components/banner";
+@use "components/footer";
+@use "components/error";
+@use "components/categories";
+@use "components/previous-winners";
+@use "components/voting-booth";
+
+@use "pages/home";
+@use "pages/how-it-works";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: b.get(b.$colors, main);
+	color: b.get(b.$colors, white);
+}
+
+main {
+	@include b.flex;
+
+	min-height: max(50vh, b.rem(400));
+
+	padding: b.rem(48) 0;
+
+	> container {
+		min-height: min(b.rem(500), 100vh);
+
+		opacity: 1;
+		transition: opacity 250ms ease-out, transform 250ms ease-in;
+
+		&.htmx-swapping {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+
+		&.htmx-settling {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+	}
+}
+
+container {
+	@include b.flex;
+
+	width: clamp(b.rem(300), 85vw, b.rem(1280));
+}
+
+container-smaller {
+	@include b.flex;
+
+	width: clamp(b.rem(300), 70vw, b.rem(928));
+}
+
+button {
+	@include b.flex;
+
+	background-color: b.get(b.$colors, primary);
+	border: b.rem(1) solid b.get(b.$colors, primary);
+	color: b.get(b.$colors, white);
+
+	padding: b.rem(16) b.rem(16);
+	border-radius: b.rem(5);
+
+	// font-variant: all-small-caps;
+	font-weight: 600;
+
+	cursor: pointer;
+
+	&.golden {
+		border-color: lighten(b.get(b.$colors, primary), 10%);
+		background: radial-gradient(
+			ellipse at 33% -5%,
+			b.get(b.$colors, primary) 0%,
+			saturate(darken(b.get(b.$colors, primary), 25%), 30%) 100%
+		);
+		text-shadow: 1px 1px 1px black;
+
+		&:hover {
+			filter: saturate(1.1);
+		}
+	}
+
+	> svg {
+		margin-left: b.rem(8);
+	}
+}
+
+contestants {
+	@include b.flex;
+
+	gap: b.rem(24);
+
+	item {
+		video {
+			aspect-ratio: 16/9;
+		}
+	}
+}
+
+.skeleton-component {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgb(16, 16, 16);
+
+	// animation-fill-mode: forwards;
+
+	overflow: hidden;
+
+	&::before {
+		content: "";
+
+		height: 100%;
+		width: 100%;
+
+		position: absolute;
+
+		background: linear-gradient(
+			90deg,
+			rgb(16, 16, 16) 0%,
+			rgb(35, 35, 35) 50%,
+			rgb(16, 16, 16) 100%
+		);
+
+		animation: skeleton 4000ms infinite linear;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes skeleton {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		transform: translate3d(-100%, 0, 0);
+	}
+	75% {
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}

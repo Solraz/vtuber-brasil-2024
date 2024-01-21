@@ -1,0 +1,85 @@
+<voting-booth>
+  <div class="title">
+    <h2>Mascote</h2>
+  </div>
+
+  <contestants hx-trigger="load" hx-post="/api/get_contestants"
+    hx-vals="js:{category: fill_category(), voter: get_cookie('voter_id')}" hx-target="contestants" hx-swap="innerHTML">
+
+  </contestants>
+
+  <voting-buttons>
+    <button class="" hx-post="/pages/initial" hx-trigger="click throttle:750ms"
+      hx-swap="innerHTML swap:250ms settle:250ms" hx-target="main>container" hx-push-url="/" class="">Sair</button>
+    <button class="" hx-post="/api/vote" hx-include="[name='winner']"
+      hx-vals="js:{ voter: get_cookies('voter_id') }">Próximo duelo <svg width="20" height="22" viewBox="0 0 20 22"
+        fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_60_219)">
+          <mask id="mask0_60_219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+            <rect width="20" height="20" fill="#D9D9D9" />
+          </mask>
+          <g mask="url(#mask0_60_219)">
+            <path
+              d="M13.4791 10.8333H3.33325V9.16665H13.4791L8.81242 4.49998L9.99992 3.33331L16.6666 9.99998L9.99992 16.6666L8.81242 15.5L13.4791 10.8333Z"
+              fill="white" />
+          </g>
+        </g>
+        <defs>
+          <filter id="filter0_d_60_219" x="0.833252" y="2.83331" width="18.3333" height="18.3333"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset dy="2" />
+            <feGaussianBlur stdDeviation="1.25" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_60_219" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_60_219" result="shape" />
+          </filter>
+        </defs>
+      </svg></button>
+  </voting-buttons>
+
+  <categories>
+    <h3 class="has-after-before">Categorias</h3>
+    <div>
+      <category hx-post="/pages/category?category=mascote" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=mascote">Mascote
+      </category>
+
+      <category hx-post="/pages/category?category=videocassetadas" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=videocassetadas">Video Cassetadas</category>
+
+      <category hx-post="/pages/category?category=karaokê" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=karaokê">Karaokê</category>
+
+      <category hx-post="/pages/category?category=noob" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=noob">Noob</category>
+
+      <category hx-post="/pages/category?category=qi negativo" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=qi negativo">QI Negativo</category>
+
+      <category hx-post="/pages/category?category=medroso" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=medroso">Medroso</category>
+
+      <category hx-post="/pages/category?category=pior dicção" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=mascote">Pior Dicção</category>
+
+      <category hx-post="/pages/category?category=fofo" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=fofo">Fofo</category>
+
+      <category hx-post="/pages/category?category=explosão de raiva" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=explosão de raiva">Explosão de Raiva</category>
+
+      <category hx-post="/pages/category?category=talento inútil" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=talento inútil">Talento Inútil</category>
+
+      <category hx-post="/pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=moderador">Moderador</category>
+
+      <category hx-post="/pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/category?category=moderador">Lorem</category>
+    </div>
+  </categories>
+</voting-booth>

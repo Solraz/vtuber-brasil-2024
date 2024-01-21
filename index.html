@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ELO Voting System Prototype</title>
+
+  <link rel="shortcut icon" href="/assets/img/logo.webp" type="image/webp">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <menu>
+    <container>
+      <items>
+        <span class="">Categorias</span>
+        <span class="">Edições anteriores</span>
+        <span class="">Sobre nós</span>
+      </items>
+      <logo hx-post="pages/initial" hx-trigger="click throttle:750ms" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/" class="">
+        <h1 class="h2">VTUBER AWARDS</h1>
+        <h1 class="h2">BRASIL 2024</h1>
+      </logo>
+      <items>
+        <span hx-post="/pages/how-it-works" hx-swap="innerHTML swap:250ms settle:250ms" hx-target="main>container"
+          hx-push-url="/how-it-works" class="">Como funciona</span>
+        <span class="colored">Inscreva-se</span>
+      </items>
+    </container>
+  </menu>
+  <main>
+    <container>
+
+    </container>
+  </main>
+  <footer>
+    <container>
+      <items>
+        <inner>
+          <span class="twitch"><img src="/assets/img/Twitch.svg" /></span>
+          <span class="twitter"><img src="/assets/img/Twitter.svg" /></span>
+          <span class="youtube"><img src="/assets/img/Youtube.svg" /></span>
+          <span class="discord"><img src="/assets/img/Discord.svg" /></span>
+        </inner>
+        <copyright>Vtuber Awards Brasil © Todos direitos reservados</copyright>
+      </items>
+      <logo hx-post="/pages/initial" hx-trigger="click throttle:750ms" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-push-url="/" class="">
+        <h1 class="h3">VTUBER AWARDS</h1>
+        <h1 class="h3">BRASIL 2024</h1>
+      </logo>
+      <items>
+        <span class="colored h3">Inscreva-se</span>
+        <span class="">Categorias</span>
+        <span class="">Edições Anteriores</span>
+        <span class="">Sobre Nós</span>
+        <span class="">Como funciona</span>
+      </items>
+    </container>
+  </footer>
+
+  <script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
+  <script src="/assets/scripts/script.js"></script>
+</body>
+
+</html>

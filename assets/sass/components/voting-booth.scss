@@ -1,0 +1,159 @@
+@use "../bootstrap" as b;
+
+voting-booth {
+	@include b.flex;
+	flex-flow: column;
+
+	width: 100%;
+
+	gap: b.rem(24);
+
+	> contestants {
+		@include b.flex;
+		flex-flow: column;
+
+		height: 100%;
+		width: 100%;
+
+		> current-contestants {
+			display: grid;
+			grid-template-columns: 1fr b.rem(32) 1fr;
+
+			width: 100%;
+
+			gap: b.rem(12);
+
+			> div:nth-child(1),
+			> div:nth-child(3) {
+				@include b.flex;
+
+				> h2 {
+					font-weight: 300;
+				}
+
+				flex-grow: 1;
+				flex-shrink: 0;
+			}
+
+			> div:nth-child(1) {
+				justify-content: end;
+			}
+
+			> div:nth-child(2) {
+				@include b.flex;
+				width: b.rem(32);
+			}
+
+			> div:nth-child(3) {
+				justify-content: start;
+			}
+
+			@media (max-width: b.rem(732)) {
+				> div:nth-child(1),
+				> div:nth-child(3) {
+					justify-content: center;
+				}
+			}
+		}
+
+		> entries {
+			@include b.flex;
+			width: 100%;
+
+			gap: b.rem(24);
+
+			item {
+				@include b.flex;
+				flex-flow: column;
+				align-items: start;
+				flex-grow: 1;
+
+				gap: b.rem(24);
+
+				video-container {
+					@include b.flex;
+
+					aspect-ratio: 1/1;
+
+					min-height: b.rem(400);
+					width: 100%;
+
+					background-color: black;
+
+					position: relative;
+
+					iframe {
+						position: absolute;
+						top: 0;
+						left: 0;
+
+						height: 100%;
+						width: 100%;
+					}
+				}
+
+				item-inner {
+					@include b.flex;
+					justify-content: space-between;
+					width: 100%;
+
+					padding: 0 b.rem(12);
+
+					> div {
+						@include b.flex;
+
+						gap: b.rem(24);
+					}
+
+					img {
+						height: b.rem(48);
+						width: b.rem(48);
+						border-radius: 50%;
+					}
+
+					input {
+						@include b.flex;
+
+						position: relative;
+
+						&::before {
+							content: "";
+							position: absolute;
+
+							height: b.rem(16);
+							width: b.rem(16);
+
+							border-radius: 50%;
+							border: b.rem(1.5) solid b.get(b.$colors, grey);
+
+							background: b.get(b.$colors, black);
+						}
+
+						&:checked {
+							&::before {
+								height: b.rem(20);
+								width: b.rem(20);
+
+								background: b.get(b.$colors, grey);
+								background-clip: content-box;
+
+								padding: b.rem(2);
+							}
+						}
+					}
+				}
+			}
+
+			iframe {
+				aspect-ratio: 16/9;
+				width: 100%;
+			}
+		}
+	}
+
+	> voting-buttons {
+		@include b.flex;
+		width: 100%;
+		gap: b.rem(24);
+	}
+}

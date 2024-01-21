@@ -1,0 +1,194 @@
+<banner>
+  <container>
+    <video-container>
+      <video class="trophy" autoplay loop muted>
+        <source src="/assets/video/trophy.mp4" type="video/mp4">
+      </video>
+      <glass></glass>
+    </video-container>
+    <div class="content">
+      <h1 class="h0">Sejam bem vindos ao <br /> Vtuber Awards Brasil 2024</h1>
+      <h4>Vtuber Awards Brasil, também conhecido como VAB, é um evento com o intuito de reunir a comunidade e celebrar
+        juntos, buscando divulgar ainda mais o Vtubing no Brasil.</h4>
+
+      <button class="golden" hx-post="/pages/categories" hx-swap="innerHTML swap:250ms settle:250ms"
+        hx-target="main>container" hx-trigger="click" hx-push-url="/categories">VOTE
+        AGORA <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_60_219)">
+            <mask id="mask0_60_219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
+              height="20">
+              <rect width="20" height="20" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_60_219)">
+              <path
+                d="M13.4791 10.8333H3.33325V9.16665H13.4791L8.81242 4.49998L9.99992 3.33331L16.6666 9.99998L9.99992 16.6666L8.81242 15.5L13.4791 10.8333Z"
+                fill="white" />
+            </g>
+          </g>
+          <defs>
+            <filter id="filter0_d_60_219" x="0.833252" y="2.83331" width="18.3333" height="18.3333"
+              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="1.25" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_60_219" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_60_219" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+      </button>
+    </div>
+  </container>
+</banner>
+
+<calendar-events>
+  <h3 class="has-after-before">Próximos Eventos</h3>
+
+  <events>
+    <event>
+      <h3>Setembro</h3>
+      <div class="content">
+        <div class="day">
+          <h4>01</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="day">
+          <h4>31</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </event>
+    <event>
+      <h3>Setembro</h3>
+      <div class="content">
+        <div class="day">
+          <h4>01</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="day">
+          <h4>31</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </event>
+    <event>
+      <h3>Setembro</h3>
+      <div class="content">
+        <div class="day">
+          <h4>01</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="day">
+          <h4>31</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </event>
+    <event>
+      <h3>Setembro</h3>
+      <div class="content">
+        <div class="day">
+          <h4>01</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="day">
+          <h4>31</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </event>
+  </events>
+</calendar-events>
+
+<categories>
+  <h3 class="has-after-before">Categorias</h3>
+  <div>
+    <category hx-post="/pages/category?category=mascote" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=mascote">Mascote
+    </category>
+
+    <category hx-post="/pages/category?category=videocassetadas" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=videocassetadas">Video Cassetadas</category>
+
+    <category hx-post="/pages/category?category=karaokê" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=karaokê">Karaokê</category>
+
+    <category hx-post="/pages/category?category=noob" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=noob">Noob</category>
+
+    <category hx-post="/pages/category?category=qi negativo" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=qi negativo">QI Negativo</category>
+
+    <category hx-post="/pages/category?category=medroso" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=medroso">Medroso</category>
+
+    <category hx-post="/pages/category?category=pior dicção" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=mascote">Pior Dicção</category>
+
+    <category hx-post="/pages/category?category=fofo" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=fofo">Fofo</category>
+
+    <category hx-post="/pages/category?category=explosão de raiva" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=explosão de raiva">Explosão de Raiva</category>
+
+    <category hx-post="/pages/category?category=talento inútil" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=talento inútil">Talento Inútil</category>
+
+    <category hx-post="/pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=moderador">Moderador</category>
+
+    <category hx-post="/pages/category?category=moderador" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/category?category=moderador">Lorem</category>
+  </div>
+</categories>
+
+<previous-years>
+  <h3 class="has-after-before">Edições Anteriores</h3>
+  <div>
+    <year hx-post="/pages/previous-winners?year=2020" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/previous-winners?year=2020">
+      <div class="img-holder">
+        <img src="/assets/img/como-fiunciona.png" alt="">
+      </div>
+      <h5>2020</h5>
+    </year>
+
+    <year hx-post="/pages/previous-winners?year=2021" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/previous-winners?year=2021">
+      <div class="img-holder">
+        <img src="/assets/img/como-fiunciona.png" alt="">
+      </div>
+      <h5>2021</h5>
+    </year>
+
+    <year hx-post="/pages/previous-winners?year=2022" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/previous-winners?year=2022">
+      <div class="img-holder">
+        <img src="/assets/img/como-fiunciona.png" alt="">
+      </div>
+      <h5>2022</h5>
+    </year>
+
+    <year hx-post="/pages/previous-winners?year=2023" hx-swap="innerHTML swap:250ms settle:250ms"
+      hx-target="main>container" hx-push-url="/previous-winners?year=2023">
+      <div class="img-holder">
+        <img src="/assets/img/como-fiunciona.png" alt="">
+      </div>
+      <h5>2023</h5>
+    </year>
+  </div>
+</previous-years>
+
+<about-us>
+  <container>
+    <h3 class="has-after-before">Sobre nós</h3>
+    <h4>O Vtuber Awards Brasil é constituído por Vtubers independentes e entusiastas do meio, ou seja, de fãs para fãs
+    </h4>
+    <h4>Este evento não possui quaisquer intuito de denegrir a imagem de outrem e/ou afirmar que um concorrente é melhor
+      que o outro.</h4>
+  </container>
+</about-us>

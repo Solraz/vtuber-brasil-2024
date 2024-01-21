@@ -1,0 +1,8 @@
+@use "../bootstrap" as b;
+
+error {
+	@include b.flex;
+	flex-flow: column;
+
+	text-align: center;
+}

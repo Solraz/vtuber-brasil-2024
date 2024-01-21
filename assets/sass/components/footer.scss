@@ -1,0 +1,142 @@
+@use "../bootstrap" as b;
+
+footer {
+	@include b.flex;
+	position: relative;
+
+	width: 100%;
+
+	margin-top: b.rem(120);
+
+	background-color: b.get(b.$colors, secondary);
+
+	> container {
+		align-items: start;
+
+		padding: b.rem(60) min(5vw, b.rem(96));
+
+		height: b.rem(275);
+	}
+
+	items {
+		height: 100%;
+	}
+
+	items:nth-child(1) {
+		@include b.flex;
+		flex-flow: column;
+		justify-content: start;
+		align-items: start;
+
+		margin-right: auto;
+
+		inner {
+			@include b.flex;
+			gap: b.rem(12);
+
+			span {
+				@include b.flex;
+				padding: b.rem(8);
+				border-radius: b.rem(5);
+
+				img {
+					filter: invert(1);
+				}
+			}
+
+			.twitch {
+				background-color: b.get(b.$colors, twitch);
+			}
+			.twitter {
+				background-color: b.get(b.$colors, twitter);
+			}
+			.youtube {
+				background-color: b.get(b.$colors, youtube);
+			}
+			.discord {
+				background-color: b.get(b.$colors, discord);
+			}
+		}
+
+		copyright {
+			margin-top: auto;
+			width: 100%;
+		}
+	}
+
+	logo {
+		cursor: pointer;
+		position: absolute;
+
+		color: b.get(b.$colors, white);
+	}
+
+	items:nth-child(3) {
+		@include b.flex;
+		flex-flow: column;
+		justify-content: start;
+		align-items: start;
+
+		text-align: end;
+
+		gap: b.rem(12);
+
+		margin-left: auto;
+
+		> span {
+			width: 100%;
+
+			color: b.get(b.$colors, gray);
+
+			&.colored {
+				color: b.get(b.$colors, white);
+				font-weight: 600;
+			}
+		}
+	}
+
+	span {
+		cursor: pointer;
+	}
+
+	@media (max-width: b.rem(950)) {
+		> container {
+			height: unset;
+
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+
+			gap: b.rem(48);
+		}
+
+		items:nth-child(1) {
+			order: 2;
+			width: auto;
+			justify-content: center;
+			margin-right: unset;
+
+			gap: b.rem(12);
+
+			> inner {
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+			}
+		}
+
+		logo {
+			order: -1;
+			position: relative;
+		}
+
+		items:nth-child(3) {
+			justify-content: center;
+			align-items: center;
+			margin-left: unset;
+			flex-flow: row;
+			text-align: center;
+			flex-wrap: wrap;
+		}
+	}
+}

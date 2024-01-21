@@ -1,0 +1,276 @@
+@use "../bootstrap" as b;
+
+previous-winners {
+	@include b.flex;
+	flex-flow: column;
+
+	width: 100%;
+
+	overflow: clip;
+
+	> .title {
+		@include b.flex;
+		flex-flow: column;
+		text-align: center;
+
+		gap: b.rem(32);
+	}
+
+	> winners-navigation {
+		@include b.flex;
+		justify-content: start;
+		align-items: start;
+
+		height: b.rem(64);
+
+		width: 100%;
+
+		> years {
+			@include b.flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+
+			position: relative;
+
+			gap: calc(40%);
+
+			transform: translate(calc(50% - 2ch));
+
+			width: 100%;
+
+			transition: left 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+			@media (max-width: b.rem(400)) {
+				padding: 0 b.rem(24);
+			}
+
+			> p {
+				@include b.flex;
+
+				color: b.get(b.$colors, white);
+
+				cursor: pointer;
+
+				transition: color 250ms linear;
+
+				background-color: b.get(b.$colors, secondary);
+				padding: 0 b.rem(2) 0 b.rem(4);
+
+				position: relative;
+
+				&:not(:last-child)::after {
+					content: "";
+					position: absolute;
+					left: calc(5ch - b.rem(6));
+
+					z-index: -1;
+
+					width: 40vw;
+					height: 1px;
+
+					border-top: 1px dotted b.get(b.$colors, white);
+					border-top-style: dotted;
+					border-top-width: b.rem(6);
+					transform: scaleY(0.5);
+				}
+			}
+
+			> p:not(.active) {
+				color: b.get(b.$colors, gray);
+			}
+		}
+
+		&:nth-child(4) {
+			align-items: end;
+		}
+
+		@media (max-width: b.rem(900)) {
+			> years {
+				gap: calc(33%);
+			}
+		}
+	}
+
+	> winners-header {
+		@include b.flex;
+		width: 100%;
+
+		margin-top: b.rem(24);
+
+		gap: b.rem(24);
+
+		> div {
+			@include b.flex;
+			background-color: b.get(b.$colors, primary);
+			color: b.get(b.$colors, white);
+
+			width: b.rem(152);
+			height: b.rem(50);
+
+			font-weight: 800;
+
+			text-transform: uppercase;
+
+			&:nth-child(n + 2) {
+				flex-grow: 1;
+			}
+		}
+
+		@media (max-width: b.rem(900)) {
+			display: none;
+		}
+	}
+
+	> winners {
+		@include b.flex;
+		flex-flow: column;
+
+		width: 100%;
+
+		gap: b.rem(24);
+
+		padding: b.rem(24) 0;
+
+		opacity: 1;
+		transition: opacity 250ms ease-out, transform 250ms ease-in;
+
+		&.htmx-swapping {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+
+		&.htmx-settling {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+
+		> winner {
+			@include b.flex;
+
+			width: 100%;
+
+			gap: b.rem(24);
+
+			divider-vertical {
+				@include b.flex;
+
+				height: b.rem(60);
+				width: b.rem(1);
+
+				background-color: b.get(b.$colors, grey);
+
+				border-radius: b.rem(4);
+			}
+
+			> div {
+				@include b.flex;
+
+				width: b.rem(152);
+
+				&.category {
+					background-color: b.get(b.$colors, secondary);
+					color: b.get(b.$colors, white);
+
+					border-radius: 0;
+
+					height: b.rem(80);
+
+					text-align: center;
+					text-transform: uppercase;
+
+					font-weight: 700;
+				}
+
+				&.public,
+				&.jury {
+					background-color: b.get(b.$colors, white);
+
+					justify-content: start;
+
+					flex-grow: 1;
+
+					height: b.rem(80);
+
+					padding: 0 b.rem(24);
+
+					gap: b.rem(8);
+
+					img {
+						border: b.rem(1) solid b.get(b.$colors, dark);
+						background-color: b.get(b.$colors, grey);
+
+						width: b.rem(48);
+						height: b.rem(48);
+
+						border-radius: 9;
+
+						overflow: hidden;
+					}
+
+					> div {
+						@include b.flex;
+						flex-flow: column;
+						justify-content: start;
+						align-items: start;
+
+						h6 {
+							display: none;
+							color: b.get(b.$colors, black);
+						}
+
+						h4 {
+							color: b.get(b.$colors, black);
+						}
+					}
+				}
+
+				&.jury {
+					border-radius: 0;
+				}
+			}
+
+			@media (max-width: b.rem(900)) {
+				> div {
+					&.category {
+						flex-shrink: 0;
+						width: 100%;
+
+						height: b.rem(32);
+						padding: b.rem(0);
+
+						border-radius: b.rem(2) b.rem(2) 0 0;
+					}
+
+					&.public,
+					&.jury {
+						height: auto;
+						padding: b.rem(24) b.rem(12);
+
+						flex-flow: column;
+
+						justify-content: start;
+						align-items: center;
+
+						> div {
+							align-items: center;
+
+							h6 {
+								display: flex;
+							}
+						}
+					}
+
+					&.jury {
+						border-radius: 0 b.rem(0) b.rem(8) 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+winner.skeleton {
+	overflow: hidden;
+	position: relative;
+	border-radius: b.rem(8);
+}

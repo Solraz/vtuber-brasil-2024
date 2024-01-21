@@ -1,2 +1,2 @@
-# vtuber-brasil-2024
+# Vtubers Awards 2024
 TODO__ Description

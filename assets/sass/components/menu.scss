@@ -1,0 +1,98 @@
+@use "../bootstrap" as b;
+
+menu {
+	@include b.flex;
+	position: relative;
+
+	width: 100%;
+
+	padding: b.rem(48) b.rem(40);
+
+	background-color: b.get(b.$colors, secondary);
+
+	items:nth-child(1) {
+		@include b.flex;
+		gap: b.rem(12);
+
+		margin-right: auto;
+
+		color: b.get(b.$colors, grey);
+	}
+
+	logo {
+		cursor: pointer;
+
+		position: absolute;
+		height: 100%;
+
+		color: b.get(b.$colors, white);
+	}
+
+	items:nth-child(3) {
+		@include b.flex;
+		gap: b.rem(12);
+
+		margin-left: auto;
+
+		color: b.get(b.$colors, grey);
+	}
+
+	span {
+		@include b.flex;
+		align-items: start;
+		justify-content: start;
+		cursor: pointer;
+	}
+
+	.colored {
+		color: b.get(b.$colors, white);
+	}
+
+	@media (max-width: b.rem(1600)) {
+		// > container {
+		// 	width: 100%;
+		// }
+
+		span {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: b.rem(1300)) {
+		padding: b.rem(24);
+
+		> container {
+			width: 100%;
+
+			justify-content: start;
+
+			gap: b.rem(12);
+
+			logo {
+				order: -1;
+				position: relative;
+
+				.h2 {
+					@include b.size-typography(3);
+				}
+			}
+
+			items:nth-child(1) {
+				margin-right: unset;
+				margin-left: auto;
+			}
+
+			items:nth-child(3) {
+				margin-left: unset;
+			}
+		}
+	}
+
+	@media (max-width: b.rem(950)) {
+		> container {
+			items {
+				display: none !important;
+			}
+		}
+	}
+}
