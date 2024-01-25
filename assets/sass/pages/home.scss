@@ -36,7 +36,7 @@ calendar-events {
 
 		width: 100%;
 
-		gap: b.rem(12);
+		gap: b.rem(16);
 
 		event {
 			@include b.flex;
@@ -61,6 +61,9 @@ calendar-events {
 		}
 
 		.content {
+			@include b.flex;
+			gap: b.rem(16);
+
 			.day {
 				@include b.flex;
 				flex-wrap: nowrap;
