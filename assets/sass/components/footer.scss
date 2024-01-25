@@ -32,7 +32,7 @@ footer {
 
 		inner {
 			@include b.flex;
-			gap: b.rem(12);
+			gap: b.rem(16);
 
 			span {
 				@include b.flex;
