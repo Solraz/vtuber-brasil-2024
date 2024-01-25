@@ -12,6 +12,7 @@ banner {
 
 	.content:nth-child(2) {
 		@include b.flex;
+		justify-content: start;
 		flex-grow: 1;
 
 		width: max(60%, b.rem(300));
@@ -122,6 +123,10 @@ banner {
 		video-container,
 		image-container {
 			margin-right: 0;
+		}
+
+		.content:nth-child(2) {
+			justify-content: center;
 		}
 
 		&.how-it-works {
