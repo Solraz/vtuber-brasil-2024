@@ -6,11 +6,9 @@ menu {
 
 	width: 100%;
 
-	padding: 0 b.rem(40);
+	padding: b.rem(32) b.rem(40);
 
 	background-color: b.get(b.$colors, secondary);
-
-	height: b.rem(80);
 
 	items:nth-child(1) {
 		@include b.flex;
