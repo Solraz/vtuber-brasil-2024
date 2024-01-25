@@ -51,7 +51,7 @@ main {
 container {
 	@include b.flex;
 
-	width: clamp(b.rem(300), 85vw, b.rem(1280));
+	width: clamp(b.rem(300), 90vw, b.rem(1280));
 }
 
 container-smaller {

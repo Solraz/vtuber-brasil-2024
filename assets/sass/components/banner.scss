@@ -14,7 +14,7 @@ banner {
 		@include b.flex;
 		flex-grow: 1;
 
-		width: max(66%, b.rem(300));
+		width: max(60%, b.rem(300));
 
 		> h1 {
 			flex-grow: 1;
@@ -61,7 +61,7 @@ banner {
 		flex-grow: 0;
 		flex-shrink: 1;
 
-		width: max(25%, b.rem(300));
+		width: max(35%, b.rem(300));
 
 		margin-right: b.rem(48);
 
