@@ -85,10 +85,13 @@ const fill_winners = async () => {
 	let winners = document.querySelector(`winners`);
 
 	let winner_url =
-		year !== "" ? `/api/years/${year}.json` : `api/years/2020.json`;
-	let fill_winners = await fetch(winner_url, {
-		method: "GET",
-	});
+		year !== "" ? `/api/years/${year}.json` : `/api/years/2020.json`;
+	let fill_winners = await fetch(
+		`https://solraz.github.io/vtuber-brasil-2024${winner_url}`,
+		{
+			method: "GET",
+		}
+	);
 	fill_winners = await fill_winners.json();
 
 	winners.innerHTML = "";
