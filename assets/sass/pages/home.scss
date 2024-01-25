@@ -27,7 +27,7 @@ calendar-events {
 
 	width: 100%;
 
-	padding: b.rem(48) 0 b.rem(12);
+	padding: b.rem(48) 0;
 
 	gap: b.rem(24);
 
@@ -81,8 +81,7 @@ previous-years {
 
 	width: 100%;
 
-	margin-top: b.rem(120);
-	padding: b.rem(16) 0;
+	padding: b.rem(48) 0;
 
 	gap: b.rem(48);
 
@@ -138,8 +137,7 @@ about-us {
 
 	position: relative;
 
-	margin-top: b.rem(120);
-	padding: b.rem(16) 0;
+	padding: b.rem(48) 0;
 
 	background-color: b.get(b.$colors, main);
 
