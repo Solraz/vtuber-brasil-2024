@@ -108,7 +108,7 @@ const fill_winners = async () => {
 					</div>
 
 					<open-new>
-						<img src="./assets/img/open-in-new.svg" alt="">
+						<img src="./assets/img/open_in_new.svg" alt="">
 					</open-new>
 				</div>
 				<div class="jury">
@@ -119,7 +119,7 @@ const fill_winners = async () => {
 					</div>
 
 					<open-new>
-						<img src="./assets/img/open-in-new.svg" alt="">
+						<img src="./assets/img/open_in_new.svg" alt="">
 					</open-new>
 				</div>
 			</winner>
