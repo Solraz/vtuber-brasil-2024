@@ -147,7 +147,7 @@ const winner_navigation = () => {
 	for (const e of other_years) {
 		e.addEventListener("click", () => {
 			year = e.dataset.year;
-			current_selected = ducument.querySelectorAll(`[data-year="${year}"]`);
+			current_selected = document.querySelectorAll(`[data-year="${year}"]`);
 
 			let current_selected_pos = current_selected[0].getBoundingClientRect();
 			let container_pos = container_years[0].getBoundingClientRect();
