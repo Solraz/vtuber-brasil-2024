@@ -201,7 +201,7 @@ previous-winners {
 
 					height: b.rem(80);
 
-					padding: b.rem(16) b.rem(16);
+					padding: b.rem(8) b.rem(16);
 
 					gap: b.rem(8);
 
@@ -238,7 +238,7 @@ previous-winners {
 
 						img {
 							height: b.rem(16);
-							width: auto;
+							width: b.rem(16);
 						}
 					}
 				}
