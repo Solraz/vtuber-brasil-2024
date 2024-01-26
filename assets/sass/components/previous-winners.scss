@@ -116,6 +116,10 @@ previous-winners {
 			}
 		}
 
+		> div:nth-child(1) {
+			width: b.rem(256);
+		}
+
 		@media (max-width: b.rem(900)) {
 			display: none;
 		}
@@ -179,6 +183,8 @@ previous-winners {
 					text-transform: uppercase;
 
 					font-weight: 700;
+
+					width: b.rem(256);
 				}
 
 				&.public,
