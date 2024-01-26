@@ -191,7 +191,7 @@ previous-winners {
 
 					height: b.rem(80);
 
-					padding: 0 b.rem(24);
+					padding: b.rem(16) b.rem(16);
 
 					gap: b.rem(8);
 
@@ -199,7 +199,7 @@ previous-winners {
 						border: b.rem(1) solid b.get(b.$colors, dark);
 						background-color: b.get(b.$colors, grey);
 
-						width: b.rem(48);
+						width: b.rem(64);
 						height: b.rem(48);
 
 						border-radius: 9;
@@ -220,6 +220,15 @@ previous-winners {
 
 						h4 {
 							color: b.get(b.$colors, black);
+						}
+					}
+
+					> open-new {
+						margin-left: auto;
+
+						img {
+							height: b.rem(16);
+							width: auto;
 						}
 					}
 				}

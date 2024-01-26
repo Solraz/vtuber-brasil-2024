@@ -62,7 +62,7 @@ const cookies = async () => {
 
 	const origin = window.location.origin;
 	let new_cookie = await fetch(
-		`https://solraz.github.io/vtuber-brasil-2024/api/cookies/`,
+		`https://solraz.github.io/vtuber-brasil-2024/api/cookies.json/`,
 		{
 			method: "GET",
 		}
@@ -106,6 +106,10 @@ const fill_winners = async () => {
 						<h6>Público</h6>
 						<h4>${value.public}</h4>
 					</div>
+
+					<open-new>
+						<img src="./assets/img/open-in-new.svg" alt="">
+					</open-new>
 				</div>
 				<div class="jury">
 					<img src="./assets/img/logo.webp" alt="">
@@ -113,6 +117,10 @@ const fill_winners = async () => {
 						<h6>Jurados</h6>
 						<h4>${value.jury}</h4>
 					</div>
+
+					<open-new>
+						<img src="./assets/img/open-in-new.svg" alt="">
+					</open-new>
 				</div>
 			</winner>
 		`;
