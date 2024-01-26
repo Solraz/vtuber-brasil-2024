@@ -156,6 +156,8 @@ const winner_navigation = () => {
 				c.style.left = `calc(-${current_selected_pos.x}px + ${container_pos.x}px)`;
 			}
 
+			e.classList.add(`active`);
+
 			for (const o of other_years) {
 				if (o === e) continue;
 				e.classList.remove(`active`);
