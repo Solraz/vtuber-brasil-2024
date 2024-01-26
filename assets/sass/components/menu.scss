@@ -26,6 +26,10 @@ menu {
 		height: 100%;
 
 		color: b.get(b.$colors, white);
+
+		h1.h2 {
+			line-height: 0.9;
+		}
 	}
 
 	items:nth-child(3) {
