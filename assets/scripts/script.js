@@ -127,8 +127,8 @@ const fill_winners = async () => {
 	}
 };
 const winner_navigation = () => {
-	// let params_year = new URLSearchParams(document.location.search);
-	// let year = params_year.get("year");
+	let params_year = new URLSearchParams(document.location.search);
+	let year = params_year.get("year");
 
 	if (!year) year = 2020;
 
@@ -136,9 +136,9 @@ const winner_navigation = () => {
 	let current_selected = document.querySelectorAll(`[data-year="${year}"]`);
 	let other_years = document.querySelectorAll(`years [data-year]`);
 
-	// for (const e of other_years) {
-	// 	e.classList.remove(`active`);
-	// }
+	for (const e of other_years) {
+		e.classList.remove(`active`);
+	}
 
 	for (const e of current_selected) {
 		e.classList.add(`active`);
@@ -154,6 +154,11 @@ const winner_navigation = () => {
 
 			for (const c of container_years) {
 				c.style.left = `calc(-${current_selected_pos.x}px + ${container_pos.x}px)`;
+			}
+
+			for (const o of other_years) {
+				if (o === e) continue;
+				e.classList.remove(`active`);
 			}
 		});
 	}
