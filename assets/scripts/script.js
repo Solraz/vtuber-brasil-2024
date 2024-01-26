@@ -127,8 +127,8 @@ const fill_winners = async () => {
 	}
 };
 const winner_navigation = () => {
-	let params_year = new URLSearchParams(document.location.search);
-	let year = params_year.get("year");
+	// let params_year = new URLSearchParams(document.location.search);
+	// let year = params_year.get("year");
 
 	if (!year) year = 2020;
 
@@ -136,19 +136,26 @@ const winner_navigation = () => {
 	let current_selected = document.querySelectorAll(`[data-year="${year}"]`);
 	let other_years = document.querySelectorAll(`years [data-year]`);
 
-	for (const e of other_years) {
-		e.classList.remove(`active`);
-	}
+	// for (const e of other_years) {
+	// 	e.classList.remove(`active`);
+	// }
 
 	for (const e of current_selected) {
 		e.classList.add(`active`);
 	}
 
-	let current_selected_pos = current_selected[0].getBoundingClientRect();
-	let container_pos = container_years[0].getBoundingClientRect();
+	for (const e of other_years) {
+		e.addEventListener("click", () => {
+			year = e.dataset.year;
+			current_selected = ducument.querySelectorAll(`[data-year="${year}"]`);
 
-	for (const c of container_years) {
-		c.style.left = `calc(-${current_selected_pos.x}px + ${container_pos.x}px)`;
+			let current_selected_pos = current_selected[0].getBoundingClientRect();
+			let container_pos = container_years[0].getBoundingClientRect();
+
+			for (const c of container_years) {
+				c.style.left = `calc(-${current_selected_pos.x}px + ${container_pos.x}px)`;
+			}
+		});
 	}
 
 	window.addEventListener("resize", () => {
