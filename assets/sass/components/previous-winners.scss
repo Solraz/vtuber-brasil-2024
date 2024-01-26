@@ -17,7 +17,7 @@ previous-winners {
 	}
 
 	padded-container {
-		width: b.rem(928);
+		width: min(b.rem(928), 100%);
 	}
 
 	winners-navigation {
