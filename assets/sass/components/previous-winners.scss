@@ -16,7 +16,11 @@ previous-winners {
 		gap: b.rem(32);
 	}
 
-	> winners-navigation {
+	padded-container {
+		width: b.rem(928);
+	}
+
+	winners-navigation {
 		@include b.flex;
 		justify-content: start;
 		align-items: start;
