@@ -23,7 +23,7 @@ previous-winners {
 	winners-navigation {
 		@include b.flex;
 		justify-content: start;
-		align-items: start;
+		align-items: center;
 
 		height: b.rem(128);
 
