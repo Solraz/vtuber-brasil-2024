@@ -3,7 +3,7 @@
     <h2>Mascote</h2>
   </div>
 
-  <contestants hx-trigger="load" hx-get="/api/get_contestants.html"
+  <contestants hx-trigger="load" hx-get="./api/get_contestants.html"
     hx-vals="js:{category: fill_category(), voter: get_cookie('voter_id')}" hx-target="contestants" hx-swap="innerHTML">
 
   </contestants>
