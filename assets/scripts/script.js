@@ -179,6 +179,8 @@ const fill_category = () => {
 	const params_category = new URLSearchParams(document.location.search);
 	let category = params_category.get("category");
 
+	if (!category) category = "mascote";
+
 	document.querySelector(`voting-booth .title h2`).textContent =
 		category.toUpperCase();
 
