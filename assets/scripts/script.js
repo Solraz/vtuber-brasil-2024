@@ -136,6 +136,13 @@ const winner_navigation = () => {
 	let current_selected = document.querySelectorAll(`[data-year="${year}"]`);
 	let other_years = document.querySelectorAll(`years [data-year]`);
 
+	let current_selected_pos = current_selected[0].getBoundingClientRect();
+	let container_pos = container_years[0].getBoundingClientRect();
+
+	for (const c of container_years) {
+		c.style.left = `calc(-${current_selected_pos.x}px + ${container_pos.x}px)`;
+	}
+
 	for (const e of other_years) {
 		e.classList.remove(`active`);
 	}
