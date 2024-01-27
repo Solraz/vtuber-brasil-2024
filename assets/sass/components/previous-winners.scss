@@ -18,6 +18,8 @@ previous-winners {
 
 	padded-container {
 		width: min(b.rem(928), 100%);
+
+		overflow: clip;
 	}
 
 	winners-navigation {
@@ -32,11 +34,9 @@ previous-winners {
 		> years {
 			@include b.flex;
 			flex-wrap: nowrap;
-			justify-content: space-between;
+			gap: b.rem(8);
 
 			position: relative;
-
-			gap: calc(40%);
 
 			transform: translate(calc(50% - 2ch));
 
@@ -61,37 +61,33 @@ previous-winners {
 				padding: 0 b.rem(2) 0 b.rem(4);
 
 				position: relative;
-
-				&:not(:last-child)::after {
-					content: "";
-					position: absolute;
-					left: calc(5ch - b.rem(6));
-
-					z-index: -1;
-
-					width: 40vw;
-					height: 1px;
-
-					border-top: 1px dotted b.get(b.$colors, white);
-					border-top-style: dotted;
-					border-top-width: b.rem(6);
-					transform: scaleY(0.5);
-				}
 			}
 
 			> p:not(.active) {
 				color: b.get(b.$colors, gray);
 			}
+
+			> years-dots {
+				z-index: -1;
+
+				width: 40%;
+				height: 1px;
+
+				flex-shrink: 0;
+
+				border-top: 1px dotted b.get(b.$colors, white);
+				border-top-style: dotted;
+				border-top-width: b.rem(6);
+				transform: scaleY(0.5);
+
+				@media (max-width: b.rem(928)) {
+					width: 30%;
+				}
+			}
 		}
 
 		&:nth-child(4) {
 			align-items: end;
-		}
-
-		@media (max-width: b.rem(900)) {
-			> years {
-				gap: calc(33%);
-			}
 		}
 	}
 
